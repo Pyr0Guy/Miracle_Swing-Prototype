@@ -6,25 +6,36 @@ void Game::InitWindow()
 	// Reading config for Window
 
 	std::ifstream ifs("config/window.miracle");
+	this->videoModes = sf::VideoMode::getFullscreenModes();
 
 	std::string title = "None";
-	sf::VideoMode windowBounds(800, 600);
+	sf::VideoMode windowBounds = sf::VideoMode::getDesktopMode();
+	this->fullscreen = false;
 	unsigned int FPSLimit = 60;
 	bool VSEnable = false;
+	unsigned int antialiasingLevel = 0;
 
 	if (ifs.is_open())
 	{
 		std::getline(ifs, title);
 		ifs >> windowBounds.width >> windowBounds.height;
+		ifs >> this->fullscreen;
 		ifs >> FPSLimit;
 		ifs >> VSEnable;
+		ifs >> antialiasingLevel;
 	}
 
 	ifs.close();
 
-	this->window = new sf::RenderWindow(windowBounds, title);
+	this->windowSettings.antialiasingLevel = antialiasingLevel;
+	if(this->fullscreen)
+		this->window = new sf::RenderWindow(windowBounds, title, sf::Style::Fullscreen, this->windowSettings);
+	else
+		this->window = new sf::RenderWindow(windowBounds, title, sf::Style::Titlebar | sf::Style::Close, this->windowSettings);
+
 	this->window->setFramerateLimit(FPSLimit);
 	this->window->setVerticalSyncEnabled(VSEnable);
+	
 	this->GameIsRunning = true;
 }
 
