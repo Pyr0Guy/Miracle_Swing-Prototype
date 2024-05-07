@@ -136,6 +136,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\engine\entities\Player.cpp" />
     <ClCompile Include="src\engine\entities\Entity.cpp" />
     <ClCompile Include="src\engine\states\GameState.cpp" />
     <ClCompile Include="src\engine\Game.cpp" />
@@ -143,6 +144,7 @@
     <ClCompile Include="src\engine\states\State.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\engine\entities\Player.h" />
     <ClInclude Include="src\engine\entities\Entity.h" />
     <ClInclude Include="src\engine\states\GameState.h" />
     <ClInclude Include="src\engine\Game.h" />

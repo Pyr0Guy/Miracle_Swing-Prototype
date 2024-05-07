@@ -12,12 +12,6 @@ State::~State()
 {
 }
 
-void State::checkForQuit()
-{
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
-		this->quit = true;
-}
-
 void State::Update(const float& dt)
 {
 }
@@ -29,6 +23,11 @@ void State::Render(sf::RenderTarget* target)
 const bool& State::getQuit() const
 {
 	return this->quit;
+}
+
+void State::EndState()
+{
+	this->quit = true;
 }
 
 /* */

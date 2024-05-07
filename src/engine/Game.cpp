@@ -105,7 +105,7 @@ void Game::Update()
 
 		if (this->states.top()->getQuit())
 		{
-			this->states.top()->EndState();
+			//this->states.top()->EndState();
 			delete this->states.top();
 			this->states.pop();
 		}

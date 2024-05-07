@@ -23,7 +23,7 @@ protected:
 	bool quit;
 
 	//Resourses
-	std::vector<sf::Texture*> textures;
+	std::map<std::string, sf::Texture> textures;
 
 	//Functuions
 	virtual void InitKeybinds() = 0;
@@ -32,9 +32,8 @@ public:
 	virtual ~State();
 
 	const bool& getQuit() const;
-	virtual void checkForQuit();
 
-	virtual void EndState() = 0;
+	void EndState();
 	virtual void UpdateInput(const float& dt) = 0;
 	virtual void Update(const float& dt) = 0;
 	virtual void Render(sf::RenderTarget* target = nullptr) = 0;

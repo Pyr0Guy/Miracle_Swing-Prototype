@@ -1,4 +1,19 @@
-﻿  Game.cpp
-  main.cpp
-  Generating Code...
+﻿  GameState.cpp
+sfml-graphics-s-d.lib(GLCheck.obj) : warning LNK4099: PDB '' was not found with 'sfml-graphics-s-d.lib(GLCheck.obj)' or at ''; linking object as if no debug info
+sfml-graphics-s-d.lib(Image.obj) : warning LNK4099: PDB '' was not found with 'sfml-graphics-s-d.lib(Image.obj)' or at ''; linking object as if no debug info
+sfml-graphics-s-d.lib(ImageLoader.obj) : warning LNK4099: PDB '' was not found with 'sfml-graphics-s-d.lib(ImageLoader.obj)' or at ''; linking object as if no debug info
+sfml-graphics-s-d.lib(RenderTarget.obj) : warning LNK4099: PDB '' was not found with 'sfml-graphics-s-d.lib(RenderTarget.obj)' or at ''; linking object as if no debug info
+sfml-graphics-s-d.lib(Shader.obj) : warning LNK4099: PDB '' was not found with 'sfml-graphics-s-d.lib(Shader.obj)' or at ''; linking object as if no debug info
+sfml-graphics-s-d.lib(Texture.obj) : warning LNK4099: PDB '' was not found with 'sfml-graphics-s-d.lib(Texture.obj)' or at ''; linking object as if no debug info
+sfml-graphics-s-d.lib(RenderTextureImplFBO.obj) : warning LNK4099: PDB '' was not found with 'sfml-graphics-s-d.lib(RenderTextureImplFBO.obj)' or at ''; linking object as if no debug info
+sfml-window-s-d.lib(GlContext.obj) : warning LNK4099: PDB '' was not found with 'sfml-window-s-d.lib(GlContext.obj)' or at ''; linking object as if no debug info
+sfml-window-s-d.lib(JoystickManager.obj) : warning LNK4099: PDB '' was not found with 'sfml-window-s-d.lib(JoystickManager.obj)' or at ''; linking object as if no debug info
+sfml-window-s-d.lib(VideoMode.obj) : warning LNK4099: PDB '' was not found with 'sfml-window-s-d.lib(VideoMode.obj)' or at ''; linking object as if no debug info
+sfml-window-s-d.lib(WindowImpl.obj) : warning LNK4099: PDB '' was not found with 'sfml-window-s-d.lib(WindowImpl.obj)' or at ''; linking object as if no debug info
+sfml-window-s-d.lib(JoystickImpl.obj) : warning LNK4099: PDB '' was not found with 'sfml-window-s-d.lib(JoystickImpl.obj)' or at ''; linking object as if no debug info
+sfml-window-s-d.lib(VideoModeImpl.obj) : warning LNK4099: PDB '' was not found with 'sfml-window-s-d.lib(VideoModeImpl.obj)' or at ''; linking object as if no debug info
+sfml-window-s-d.lib(VulkanImplWin32.obj) : warning LNK4099: PDB '' was not found with 'sfml-window-s-d.lib(VulkanImplWin32.obj)' or at ''; linking object as if no debug info
+sfml-window-s-d.lib(WindowImplWin32.obj) : warning LNK4099: PDB '' was not found with 'sfml-window-s-d.lib(WindowImplWin32.obj)' or at ''; linking object as if no debug info
+sfml-window-s-d.lib(WglContext.obj) : warning LNK4099: PDB '' was not found with 'sfml-window-s-d.lib(WglContext.obj)' or at ''; linking object as if no debug info
+sfml-system-s-d.lib(String.obj) : warning LNK4099: PDB '' was not found with 'sfml-system-s-d.lib(String.obj)' or at ''; linking object as if no debug info
   MiracleSwing.vcxproj -> F:\SFML_Projects\MiracleSwing\x64\Debug\MiracleSwing.exe
