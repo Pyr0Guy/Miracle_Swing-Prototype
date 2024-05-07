@@ -14,6 +14,8 @@ class Player :
 public:
 	Player(float x, float y, sf::Texture* texture);
 	~Player();
+
+	void Update(const float& dt);
 };
 
 #endif // !PLAYER_H

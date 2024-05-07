@@ -8,6 +8,7 @@
 #include "SFML/Window/Keyboard.hpp"
 
 #include "../component/MovementComponent.h"
+#include "../component/HitboxComponent.h"
 
 class Entity
 {
@@ -16,9 +17,10 @@ private:
 
 protected:
 	sf::Texture* texture;
-	sf::Sprite* sprite;
+	sf::Sprite sprite;
 
-	MovementComponent* movementComponent;
+	HitboxComponent*	hitboxComponent;
+	MovementComponent*	movementComponent;
 
 public:
 	Entity();
@@ -26,13 +28,14 @@ public:
 
 	//Component Functions
 	void CreateSprite(sf::Texture* texture);
+	void CreateHitboxComponent(sf::Sprite& sprite, const float offset_x, const float offset_y, const float width, const float height);
 	void CreateMovementComponent(const float maxVelocity);
 
 	//Functions
 	virtual void setPosition(const float x, const float y);
 	virtual void Move(const float& dt, const float dir_x, const float dir_y);
 	virtual void Update(const float& dt);
-	virtual void Render(sf::RenderTarget* target);
+	virtual void Render(sf::RenderTarget& target);
 };
 
 #endif // !ENTITY_H
