@@ -7,6 +7,8 @@
 #include "SFML/Graphics/Sprite.hpp"
 #include "SFML/Window/Keyboard.hpp"
 
+#include "../component/MovementComponent.h"
+
 class Entity
 {
 private:
@@ -16,7 +18,7 @@ protected:
 	sf::Texture* texture;
 	sf::Sprite* sprite;
 
-	float movementSpeed;
+	MovementComponent* movementComponent;
 
 public:
 	Entity();
@@ -24,6 +26,7 @@ public:
 
 	//Component Functions
 	void CreateSprite(sf::Texture* texture);
+	void CreateMovementComponent(const float maxVelocity);
 
 	//Functions
 	virtual void setPosition(const float x, const float y);

@@ -5,7 +5,7 @@ void Game::InitWindow()
 {
 	// Reading config for Window
 
-	std::ifstream ifs("config/window.miracle");
+	std::ifstream ifs("assets/config/window.miracle");
 	this->videoModes = sf::VideoMode::getFullscreenModes();
 
 	std::string title = "None";
@@ -41,8 +41,8 @@ void Game::InitWindow()
 
 void Game::InitKeys()
 {
-	std::ifstream ifs("config/fuckingKeys.miracle");
-
+	std::ifstream ifs("assets/config/fuckingKeys.miracle");
+	//sf::Keyboard::Key::A;
 	if (ifs.is_open())
 	{
 		std::string key = "";

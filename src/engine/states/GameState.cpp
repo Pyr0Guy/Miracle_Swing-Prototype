@@ -2,7 +2,7 @@
 
 void GameState::InitKeybinds()
 {
-	std::ifstream ifs("config/keybinds.miracle");
+	std::ifstream ifs("assets/config/keybinds.miracle");
 
 	if (ifs.is_open())
 	{
