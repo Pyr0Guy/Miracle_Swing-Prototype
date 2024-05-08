@@ -12,7 +12,7 @@ class Player :
 	void InitVariables();
 	void InitComponent();
 public:
-	Player(float x, float y, sf::Texture* texture);
+	Player(float x, float y, sf::Texture& texture);
 	~Player();
 
 	void Update(const float& dt);

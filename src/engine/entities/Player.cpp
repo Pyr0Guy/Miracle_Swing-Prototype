@@ -12,14 +12,14 @@ void Player::InitComponent()
 }
 
 //-----------------------------Constructor / Destructor-----------------------------
-Player::Player(float x, float y, sf::Texture* texture)
+Player::Player(float x, float y, sf::Texture& texture)
 {
 	this->InitVariables();
 	this->setPosition(x, y);
 
 	this->InitComponent();
 
-	this->CreateSprite(texture);
+	this->SetTexture(texture);
 }
 
 Player::~Player()
