@@ -1,10 +1,7 @@
-﻿  Renderer.cpp
-  Camera.cpp
-  Game.cpp
-  main.cpp
+﻿  Player.cpp
   Generating code
-  84 of 102 functions (82.4%) were compiled, the rest were copied from previous compilation.
-    72 functions were new in current compilation
-    2 functions had inline decision re-evaluated but remain unchanged
+  9 of 551 functions ( 1.6%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   MiracleSwing.vcxproj -> F:\SFML_Projects\MiracleSwing\x64\Release\MiracleSwing.exe

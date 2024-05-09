@@ -8,12 +8,16 @@
 class GameState : public State
 {
 	Player* player;
+	bool pressed;
+	bool hold;
 
 	//Functions
 	void InitKeybinds();
 	void InitTextures();
 	//Co-op maybe?!?!?!?!?
-	void InitPlayers();
+	void InitPlayers(sf::RenderWindow& window);
+
+	bool CheckForPressedKey(int key);
 public:
 	GameState(sf::RenderWindow* window, std::map<std::string, int>* supportedKeys, std::stack<State*>* states);
 	~GameState();

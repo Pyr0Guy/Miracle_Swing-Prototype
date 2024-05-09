@@ -1,6 +1,6 @@
 #include "HitboxComponent.h"
 
-HitboxComponent::HitboxComponent(sf::Sprite& sprite, float offset_x, float offset_y, float width, float height)
+HitboxComponent::HitboxComponent(sf::Sprite& sprite, float offset_x, float offset_y, float width, float height, sf::Color hiboxColor)
 	: sprite(sprite),
 	offsetX(offset_x),
 	offsetY(offset_y)
@@ -9,7 +9,7 @@ HitboxComponent::HitboxComponent(sf::Sprite& sprite, float offset_x, float offse
 	this->hitbox.setSize(sf::Vector2f(width, height));
 	this->hitbox.setFillColor(sf::Color::Transparent);
 	this->hitbox.setOutlineThickness(1.f);
-	this->hitbox.setOutlineColor(sf::Color::Green);
+	this->hitbox.setOutlineColor(hiboxColor);
 }
 
 HitboxComponent::~HitboxComponent()

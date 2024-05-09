@@ -136,6 +136,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\engine\component\AttackComponent.cpp" />
     <ClCompile Include="src\engine\component\HitboxComponent.cpp" />
     <ClCompile Include="src\engine\component\MovementComponent.cpp" />
     <ClCompile Include="src\engine\entities\Player.cpp" />
@@ -146,6 +147,7 @@
     <ClCompile Include="src\engine\states\State.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\engine\component\AttackComponent.h" />
     <ClInclude Include="src\engine\component\HitboxComponent.h" />
     <ClInclude Include="src\engine\component\MovementComponent.h" />
     <ClInclude Include="src\engine\entities\Player.h" />

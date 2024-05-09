@@ -20,11 +20,14 @@ void GameState::InitTextures()
 {
 	if (!this->textures["PLAYER_IDLE"].loadFromFile("assets/images/textures/player.png"))
 		throw "ERROR::GAME_STATE::CANT_LOAD_PLAYER_IDLE_TEXTURE";
+	if (!this->textures["PLAYER_ATACK"].loadFromFile("assets/images/textures/playerATAck.png"))
+		throw "ERROR::GAME_STATE::CANT_LOAD_PLAYER_ATACK_TEXTURE";
 }
 
-void GameState::InitPlayers()
+void GameState::InitPlayers(sf::RenderWindow& window)
 {
-	this->player = new Player(0, 0, this->textures["PLAYER_IDLE"]);
+	sf::Texture tmpTexture = this->textures["PLAYER_IDLE"];
+	this->player = new Player(static_cast<float>(window.getSize().x / 2), static_cast<float>(window.getSize().y - tmpTexture.getSize().y), tmpTexture, static_cast<float>(tmpTexture.getSize().x / 2), static_cast<float>(tmpTexture.getSize().y / 2));
 }
 
 GameState::GameState(sf::RenderWindow* window, std::map<std::string, int>* supportedKeys, std::stack<State*>* states)
@@ -32,13 +35,42 @@ GameState::GameState(sf::RenderWindow* window, std::map<std::string, int>* suppo
 {
 	this->InitKeybinds();
 	this->InitTextures();
-	this->InitPlayers();
+	this->InitPlayers(*window);
+
+	this->pressed = false;
+	this->hold = false;
 }
 
 GameState::~GameState()
 {
 }
 
+//TODO: Create Keybord System with KeyPressed, KeyHold and KeyRelease
+bool GameState::CheckForPressedKey(int key)
+{
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key(key)))
+	{
+		if (this->pressed == false)
+		{
+			this->pressed = true;
+		}
+
+		if (this->hold == true)
+		{
+			this->pressed = false;
+		}
+
+		this->hold = true;
+	}
+	else
+	{
+		this->hold = false;
+	}
+
+	return this->pressed;
+
+	
+}
 
 void GameState::UpdateInput(const float& dt)
 {
@@ -51,6 +83,17 @@ void GameState::UpdateInput(const float& dt)
 		this->player->Move(dt, 0.f, -1.f);
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key(this->keybinds["MOVE_DOWN"])))
 		this->player->Move(dt, 0.f, 1.f);
+	
+	if (this->CheckForPressedKey(this->keybinds["ATACK"]) && this->player->isAtacking == false && this->player->canAttack == true)
+	{
+		this->player->isAtacking = true;
+		this->player->SetTexture(this->textures["PLAYER_ATACK"]);
+	}
+
+	if (this->player->isAtacking == false)
+	{
+		this->player->SetTexture(this->textures["PLAYER_IDLE"]);
+	}
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key(this->keybinds["CLOSE"])))
 		this->EndState();

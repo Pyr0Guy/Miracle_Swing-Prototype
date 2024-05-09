@@ -1,4 +1,8 @@
-F:\SFML_Projects\MiracleSwing\MiracleSwing\src\engine\Renderer.cpp;F:\SFML_Projects\MiracleSwing\MiracleSwing\x64\Release\Renderer.obj
-F:\SFML_Projects\MiracleSwing\MiracleSwing\src\engine\Camera.cpp;F:\SFML_Projects\MiracleSwing\MiracleSwing\x64\Release\Camera.obj
+F:\SFML_Projects\MiracleSwing\MiracleSwing\src\engine\component\HitboxComponent.cpp;F:\SFML_Projects\MiracleSwing\MiracleSwing\x64\Release\HitboxComponent.obj
+F:\SFML_Projects\MiracleSwing\MiracleSwing\src\engine\component\MovementComponent.cpp;F:\SFML_Projects\MiracleSwing\MiracleSwing\x64\Release\MovementComponent.obj
+F:\SFML_Projects\MiracleSwing\MiracleSwing\src\engine\entities\Player.cpp;F:\SFML_Projects\MiracleSwing\MiracleSwing\x64\Release\Player.obj
+F:\SFML_Projects\MiracleSwing\MiracleSwing\src\engine\entities\Entity.cpp;F:\SFML_Projects\MiracleSwing\MiracleSwing\x64\Release\Entity.obj
+F:\SFML_Projects\MiracleSwing\MiracleSwing\src\engine\states\GameState.cpp;F:\SFML_Projects\MiracleSwing\MiracleSwing\x64\Release\GameState.obj
 F:\SFML_Projects\MiracleSwing\MiracleSwing\src\engine\Game.cpp;F:\SFML_Projects\MiracleSwing\MiracleSwing\x64\Release\Game.obj
 F:\SFML_Projects\MiracleSwing\MiracleSwing\src\main.cpp;F:\SFML_Projects\MiracleSwing\MiracleSwing\x64\Release\main.obj
+F:\SFML_Projects\MiracleSwing\MiracleSwing\src\engine\states\State.cpp;F:\SFML_Projects\MiracleSwing\MiracleSwing\x64\Release\State.obj

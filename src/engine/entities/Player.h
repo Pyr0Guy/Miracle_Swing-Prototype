@@ -7,13 +7,24 @@ class Player :
 	public Entity
 {
 	//Variables
+	float originX;
+	float originY;
+
+	float attackCooldown;
 
 	//Initilizer functions
 	void InitVariables();
 	void InitComponent();
+
+	//Functions
+	void UpdateAttack(const float& dt);
 public:
-	Player(float x, float y, sf::Texture& texture);
+	Player(float x, float y, sf::Texture& texture, const float originX = 0, const float originY = 0);
 	~Player();
+
+	//Variables
+	bool isAtacking;
+	bool canAttack;
 
 	void Update(const float& dt);
 };
