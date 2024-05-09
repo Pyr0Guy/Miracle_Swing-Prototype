@@ -19,7 +19,7 @@ class AttackComponent
 	void InitComponents(sf::Sprite& sprite, float x, float y, const float width, const float height);
 
 public:
-	AttackComponent(sf::Sprite& spritem, float x, float y, const float width, const float height);
+	AttackComponent(sf::Sprite& sprite, float x, float y, const float width, const float height);
 	~AttackComponent();
 
 	//Variables

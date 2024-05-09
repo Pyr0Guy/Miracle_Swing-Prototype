@@ -3,6 +3,8 @@
 
 #include "Entity.h"
 
+#include <cmath>
+
 class Player :
 	public Entity
 {

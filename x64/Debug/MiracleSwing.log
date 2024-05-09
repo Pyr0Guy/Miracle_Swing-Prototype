@@ -1,2 +1,8 @@
-﻿  GameState.cpp
+﻿  Game.cpp
+  AttackComponent.cpp
+  Entity.cpp
+  Player.cpp
+  GameState.cpp
+  main.cpp
+  Generating Code...
   MiracleSwing.vcxproj -> F:\SFML_Projects\MiracleSwing\x64\Debug\MiracleSwing.exe

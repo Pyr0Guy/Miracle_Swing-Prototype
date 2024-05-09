@@ -39,6 +39,15 @@ void Player::UpdateAttack(const float& dt)
 	{
 		if (this->attackComponent == nullptr)
 		{
+			/* TODO: if circle collision BETTER for this game finish this piece of shit
+			float diagonal = std::sqrt(std::pow(this->sprite.getTextureRect().width, 2) + std::pow(this->sprite.getTextureRect().height, 2));
+			float circleRadius = diagonal * sqrt(2) / 2;
+
+			std::cout << this->sprite.getTextureRect().width << " | " << this->sprite.getTextureRect().height << std::endl;
+
+			this->attackComponent = new AttackComponent(this->sprite, -originX, -originY, circleRadius);
+			*/
+
 			this->attackComponent = new AttackComponent(this->sprite, -originX - 5.f, -originY - 5.f,
 				static_cast<float>(this->sprite.getTextureRect().width + 10),
 				static_cast<float>(this->sprite.getTextureRect().height + 5));
@@ -73,7 +82,6 @@ void Player::Update(const float& dt)
 		this->hitboxComponent->Update();
 
 	this->UpdateAttack(dt);
-
 }
 
 /* */
