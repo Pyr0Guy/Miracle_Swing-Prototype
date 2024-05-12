@@ -22,6 +22,11 @@ void GameState::InitTextures()
 		throw "ERROR::GAME_STATE::CANT_LOAD_PLAYER_IDLE_TEXTURE";
 	if (!this->textures["PLAYER_ATACK"].loadFromFile("assets/images/textures/playerATAck.png"))
 		throw "ERROR::GAME_STATE::CANT_LOAD_PLAYER_ATACK_TEXTURE";
+	if (!this->textures["PLAYER_BALL"].loadFromFile("assets/images/textures/stupid.png"))
+		throw "ERROR::GAME_STATE::CANT_LOAD_PLAYER_ATACK_TEXTURE";
+	if (!this->textures["PLAYER_ENEMY"].loadFromFile("assets/images/textures/osakaEnemy.jpg"))
+		throw "ERROR::GAME_STATE::CANT_LOAD_PLAYER_ATACK_TEXTURE";
+
 }
 
 void GameState::InitPlayers(sf::RenderWindow& window)
@@ -39,6 +44,9 @@ GameState::GameState(sf::RenderWindow* window, std::map<std::string, int>* suppo
 
 	this->pressed = false;
 	this->hold = false;
+
+	//this->bVector.push_back(new Bullet(this->textures["PLAYER_BALL"], window->getSize().x / 2, 200, 0.f, 1.f));
+	this->enemy = new Enemy(this->textures["PLAYER_ENEMY"], window->getSize().x / 2, 100.f);
 }
 
 GameState::~GameState()
@@ -103,7 +111,54 @@ void GameState::Update(const float& dt)
 {
 	this->UpdateInput(dt);
 
+	//Player hitbox Check
+
+	for (size_t i = 0; i < this->bVector.size(); i++)
+	{
+		if (this->bVector[i]->CheckInterseck(this->player->GetGlobalBounds()))
+		{
+			this->EndState();
+		}
+
+		if (this->bVector[i]->GetPosition().x >= this->window->getSize().x || this->bVector[i]->GetPosition().x <= 0 ||
+			this->bVector[i]->GetPosition().y >= this->window->getSize().y || this->bVector[i]->GetPosition().y <= 0)
+		{
+			this->bVector.erase(this->bVector.begin() + i);
+		}
+	}
+	
+	//Player Hitbox Attack Check
+	if (this->player->isAtacking)
+	{
+		for (size_t i = 0; i < this->bVector.size(); i++)
+		{
+			if (this->bVector[i]->CheckInterseck(this->player->GetCollisionBounds()))
+			{
+				sf::FloatRect plRect = this->player->GetCollisionBounds();
+				sf::FloatRect blRect = this->bVector[i]->GetGlobalBounds();
+
+				//This is stupid
+				if ((plRect.left + plRect.width) <= blRect.left + blRect.width)
+					this->bVector[i]->dirX = 1;
+				else
+					this->bVector[i]->dirX = -1;
+
+				this->bVector[i]->dirY = -1;
+			}
+		}
+	}
+
+	if (this->enemy->spawnTimer <= 0)
+	{
+		this->bVector.push_back(new Bullet(this->textures["PLAYER_BALL"], this->enemy->GetPosition().x, this->enemy->GetPosition().y + (this->enemy->GetSize().y / 2), 0, 1));
+		this->enemy->spawnTimer = 0.5f;
+	}
+
 	this->player->Update(dt);
+	this->enemy->Update(dt);
+
+	for (auto& b : this->bVector)
+		b->Update(dt);
 }
 
 void GameState::Render(sf::RenderTarget* target)
@@ -112,6 +167,11 @@ void GameState::Render(sf::RenderTarget* target)
 		target = this->window;
 
 	this->player->Render(*target);
+
+	for (auto& b : this->bVector)
+		b->Render(*target);
+
+	this->enemy->Render(*target);
 }
 
 /* */

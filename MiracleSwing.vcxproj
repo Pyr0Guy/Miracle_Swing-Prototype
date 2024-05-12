@@ -136,6 +136,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\engine\entities\Enemy.cpp" />
+    <ClCompile Include="src\engine\entities\Bullet.cpp" />
     <ClCompile Include="src\engine\component\HitboxComponentCircle.cpp" />
     <ClCompile Include="src\engine\component\AttackComponent.cpp" />
     <ClCompile Include="src\engine\component\HitboxComponent.cpp" />
@@ -148,6 +150,8 @@
     <ClCompile Include="src\engine\states\State.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\engine\entities\Enemy.h" />
+    <ClInclude Include="src\engine\entities\Bullet.h" />
     <ClInclude Include="src\engine\component\HitboxComponentCircle.h" />
     <ClInclude Include="src\engine\component\AttackComponent.h" />
     <ClInclude Include="src\engine\component\HitboxComponent.h" />

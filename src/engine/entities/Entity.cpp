@@ -36,6 +36,32 @@ void Entity::CreateMovementComponent(const float maxVelocity)
 	this->movementComponent = new MovementComponent(sprite,maxVelocity);
 }
 
+void Entity::CreateAttackComponent(const float x, const float y, const float width, const float height)
+{
+	this->attackComponent = new AttackComponent(this->sprite, x, y, width, height);
+}
+
+const sf::Vector2f Entity::GetPosition() const
+{
+	if (this->hitboxComponent)
+		return this->hitboxComponent->GetPosition();
+
+	return this->sprite.getPosition();
+}
+
+const sf::Vector2i Entity::GetSize() const
+{
+	return this->sprite.getTextureRect().getSize();
+}
+
+const sf::FloatRect Entity::GetGlobalBounds() const
+{
+	if (this->hitboxComponent)
+		return this->hitboxComponent->GetGlobalBounds();
+
+	return this->sprite.getGlobalBounds();
+}
+
 void Entity::SetOrigin(const float x, const float y)
 {
 	this->sprite.setOrigin(x, y);

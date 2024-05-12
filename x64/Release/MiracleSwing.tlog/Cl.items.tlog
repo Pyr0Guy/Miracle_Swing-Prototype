@@ -1,3 +1,7 @@
+F:\SFML_Projects\MiracleSwing\MiracleSwing\src\engine\entities\Enemy.cpp;F:\SFML_Projects\MiracleSwing\MiracleSwing\x64\Release\Enemy.obj
+F:\SFML_Projects\MiracleSwing\MiracleSwing\src\engine\entities\Bullet.cpp;F:\SFML_Projects\MiracleSwing\MiracleSwing\x64\Release\Bullet.obj
+F:\SFML_Projects\MiracleSwing\MiracleSwing\src\engine\component\HitboxComponentCircle.cpp;F:\SFML_Projects\MiracleSwing\MiracleSwing\x64\Release\HitboxComponentCircle.obj
+F:\SFML_Projects\MiracleSwing\MiracleSwing\src\engine\component\AttackComponent.cpp;F:\SFML_Projects\MiracleSwing\MiracleSwing\x64\Release\AttackComponent.obj
 F:\SFML_Projects\MiracleSwing\MiracleSwing\src\engine\component\HitboxComponent.cpp;F:\SFML_Projects\MiracleSwing\MiracleSwing\x64\Release\HitboxComponent.obj
 F:\SFML_Projects\MiracleSwing\MiracleSwing\src\engine\component\MovementComponent.cpp;F:\SFML_Projects\MiracleSwing\MiracleSwing\x64\Release\MovementComponent.obj
 F:\SFML_Projects\MiracleSwing\MiracleSwing\src\engine\entities\Player.cpp;F:\SFML_Projects\MiracleSwing\MiracleSwing\x64\Release\Player.obj

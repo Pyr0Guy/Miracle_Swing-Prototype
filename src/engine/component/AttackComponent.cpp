@@ -22,6 +22,11 @@ AttackComponent::~AttackComponent()
 	delete attackHitbox;
 }
 
+HitboxComponent* AttackComponent::GetHitbox()
+{
+	return this->attackHitbox;
+}
+
 void AttackComponent::Update(float dt)
 {
 	if (this->destroyYourselfNOW == false)

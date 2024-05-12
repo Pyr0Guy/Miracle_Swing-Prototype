@@ -24,6 +24,7 @@ public:
 
 	//Variables
 	bool destroyYourselfNOW;
+	HitboxComponent* GetHitbox();
 
 	//Functions 
 	void Update(float dt);

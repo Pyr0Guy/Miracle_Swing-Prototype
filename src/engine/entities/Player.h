@@ -28,6 +28,9 @@ public:
 	bool isAtacking;
 	bool canAttack;
 
+	bool CheckCollision(const sf::FloatRect& frect);
+	sf::FloatRect GetCollisionBounds();
+
 	void Update(const float& dt);
 };
 

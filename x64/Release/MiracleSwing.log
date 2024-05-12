@@ -1,7 +1,33 @@
-﻿  Player.cpp
+﻿  Enemy.cpp
+F:\SFML_Projects\MiracleSwing\MiracleSwing\src\engine\entities\Enemy.cpp(10,101): warning C4244: 'argument': conversion from 'T' to 'const float', possible loss of data
+F:\SFML_Projects\MiracleSwing\MiracleSwing\src\engine\entities\Enemy.cpp(10,101): warning C4244:         with
+F:\SFML_Projects\MiracleSwing\MiracleSwing\src\engine\entities\Enemy.cpp(10,101): warning C4244:         [
+F:\SFML_Projects\MiracleSwing\MiracleSwing\src\engine\entities\Enemy.cpp(10,101): warning C4244:             T=unsigned int
+F:\SFML_Projects\MiracleSwing\MiracleSwing\src\engine\entities\Enemy.cpp(10,101): warning C4244:         ]
+F:\SFML_Projects\MiracleSwing\MiracleSwing\src\engine\entities\Enemy.cpp(10,57): warning C4244: 'argument': conversion from 'T' to 'const float', possible loss of data
+F:\SFML_Projects\MiracleSwing\MiracleSwing\src\engine\entities\Enemy.cpp(10,57): warning C4244:         with
+F:\SFML_Projects\MiracleSwing\MiracleSwing\src\engine\entities\Enemy.cpp(10,57): warning C4244:         [
+F:\SFML_Projects\MiracleSwing\MiracleSwing\src\engine\entities\Enemy.cpp(10,57): warning C4244:             T=unsigned int
+F:\SFML_Projects\MiracleSwing\MiracleSwing\src\engine\entities\Enemy.cpp(10,57): warning C4244:         ]
+F:\SFML_Projects\MiracleSwing\MiracleSwing\src\engine\entities\Enemy.cpp(34,33): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+F:\SFML_Projects\MiracleSwing\MiracleSwing\src\engine\entities\Enemy.cpp(39,29): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  Bullet.cpp
+  HitboxComponentCircle.cpp
+  AttackComponent.cpp
+  HitboxComponent.cpp
+  Player.cpp
+  Entity.cpp
+  GameState.cpp
+F:\SFML_Projects\MiracleSwing\MiracleSwing\src\engine\states\GameState.cpp(49,78): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+F:\SFML_Projects\MiracleSwing\MiracleSwing\src\engine\states\GameState.cpp(49,78): warning C4244:         with
+F:\SFML_Projects\MiracleSwing\MiracleSwing\src\engine\states\GameState.cpp(49,78): warning C4244:         [
+F:\SFML_Projects\MiracleSwing\MiracleSwing\src\engine\states\GameState.cpp(49,78): warning C4244:             T=unsigned int
+F:\SFML_Projects\MiracleSwing\MiracleSwing\src\engine\states\GameState.cpp(49,78): warning C4244:         ]
+  Game.cpp
+  main.cpp
   Generating code
-  9 of 551 functions ( 1.6%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    1 functions had inline decision re-evaluated but remain unchanged
+  121 of 645 functions (18.8%) were compiled, the rest were copied from previous compilation.
+    89 functions were new in current compilation
+    69 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   MiracleSwing.vcxproj -> F:\SFML_Projects\MiracleSwing\x64\Release\MiracleSwing.exe

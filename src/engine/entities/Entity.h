@@ -31,6 +31,12 @@ public:
 	void SetTexture(sf::Texture& texture);
 	void CreateHitboxComponent(sf::Sprite& sprite, const float offset_x, const float offset_y, const float width, const float height);
 	void CreateMovementComponent(const float maxVelocity);
+	void CreateAttackComponent(const float x, const float y, const float width, const float height);
+
+	//Accessers
+	const sf::Vector2f GetPosition() const;
+	const sf::Vector2i GetSize() const;
+	const sf::FloatRect GetGlobalBounds() const;
 
 	//Functions
 	virtual void SetOrigin(const float x, const float y);

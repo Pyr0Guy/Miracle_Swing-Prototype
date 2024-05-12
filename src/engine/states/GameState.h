@@ -4,12 +4,19 @@
 #include "State.h"
 #include "../entities/Player.h"
 #include "../entities/Entity.h"
+#include "../entities/Bullet.h"
+#include "../entities/Enemy.h"
+
+#include <vector>
 
 class GameState : public State
 {
 	Player* player;
 	bool pressed;
 	bool hold;
+
+	Enemy* enemy;
+	std::vector<Bullet*> bVector;
 
 	//Functions
 	void InitKeybinds();

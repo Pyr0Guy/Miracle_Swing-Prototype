@@ -10,7 +10,7 @@ void Player::InitVariables()
 
 void Player::InitComponent()
 {
-	this->CreateMovementComponent(100.f);
+	this->CreateMovementComponent(150.f);
 	this->CreateHitboxComponent(this->sprite, 24.f - originX, 42.f - originY, 10.f, 10.f);
 }
 
@@ -48,7 +48,7 @@ void Player::UpdateAttack(const float& dt)
 			this->attackComponent = new AttackComponent(this->sprite, -originX, -originY, circleRadius);
 			*/
 
-			this->attackComponent = new AttackComponent(this->sprite, -originX - 5.f, -originY - 5.f,
+			this->CreateAttackComponent(-originX - 5.f, -originY - 5.f,
 				static_cast<float>(this->sprite.getTextureRect().width + 10),
 				static_cast<float>(this->sprite.getTextureRect().height + 5));
 		}
@@ -74,6 +74,23 @@ void Player::UpdateAttack(const float& dt)
 
 		this->attackCooldown -= 1.f * dt;
 	}
+}
+
+bool Player::CheckCollision(const sf::FloatRect& frect)
+{
+	return this->attackComponent->GetHitbox()->CheckIntersect(frect);
+		//this->hitbox.getGlobalBounds().intersects(frect);
+}
+
+sf::FloatRect Player::GetCollisionBounds()
+{
+	if (this->attackComponent)
+	{
+		//sf::FloatRect rect(this->attackComponent->GetHitbox()->GetGlobalBounds())
+		return this->attackComponent->GetHitbox()->GetGlobalBounds();
+	}
+
+	return sf::FloatRect();
 }
 
 void Player::Update(const float& dt)
